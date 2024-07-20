@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hồ cá cảnh đẹp</title>
+    <link rel="icon" type="./image/png" href="image/ball.png">
+    <link rel="stylesheet" href="hồ.css">
+</head>
+<body>
+    <div class="container">
+        <div class="aquarium">
+            <div class="bg"></div>
+            <div class="water"></div>
+            <div class="border border-top"></div>
+            <div class="border border-bottom"></div>
+            <div class="fish fish-1"></div>
+            <div class="fish fish-2"></div>
+            <div class="fish fish-3"></div>
+            <div class="fish fish-4"></div>
+            <div class="diver diver-1"></div>
+            <div class="diver diver-2"></div>
+            <div class="diver diver-3"></div>
+        </div>
+    </div>
+    <div class="music-controls">
+        <button onclick="playMusic('big-jason-slap-house-version-background-music-for-video-vlog-37-sec-223903.mp3')">Play Music 1</button>
+        <button onclick="playMusic('flow-211881.mp3')">Play Music 2</button>
+        <button onclick="playMusic('titanium-170190.mp3')">Play Music 3</button>
+    </div>
+
+    <audio id="audioPlayer" controls autoplay muted loop>
+        <source id="audioSource" src="audio/big-jason-slap-house-version-background-music-for-video-vlog-37-sec-223903.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        function playMusic(fileName) {
+            var audioPlayer = document.getElementById('audioPlayer');
+            var audioSource = document.getElementById('audioSource');
+            audioSource.src = './audio/' + fileName;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
